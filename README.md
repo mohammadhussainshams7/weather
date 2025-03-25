@@ -43,8 +43,8 @@ Before starting, make sure you have the following installed:
 ## Tech Stack
 1. Frontend: Angular, TypeScript, HTML, CSS
 
-## Weather API: (mention if a specific weather API is used)
-License
+## Weather API: (openweathermap.org)
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
