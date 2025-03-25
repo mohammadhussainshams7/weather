@@ -1,0 +1,35 @@
+.weather{
+    background:  
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    , url("http://localhost:4200/assets/Climate-Weather-Blue-Clouds-1280px.webp") no-repeat center center;
+    background-size:cover;
+
+    height: 100vh;
+    overflow-y: scroll;
+    color: aliceblue;
+
+}
+.weather .weather-card .card{
+    transition: all 1s;
+    background-color: hsl(22.5deg 11.43% 86.27%);
+    cursor: pointer;
+}
+.weather .weather-card .card:hover{
+    background-color:hsl(4.97deg 79.23% 35.88%) ;
+    color: aliceblue;
+}
+
+.weather h2{
+    margin-top: 5rem;
+}
+.weather button{
+    background-color: hsl(4.97deg 79.23% 35.88%) ;
+    border-color: brown;
+}
+.row-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3px;
+}

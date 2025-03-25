@@ -1,0 +1,58 @@
+<main class="text-center weather">
+  <div class="container">
+    
+  <h2 class="text-center p-2">Weather Forecast</h2>
+  <div class="justify-content-center d-flex flex-column align-items-center ">
+    
+    <div class="col-md-6">
+      <div class="mt-3">
+        <input
+          [(ngModel)]="city"
+          class="form-control"
+          type="text"
+          placeholder="Enter City"
+        />
+      </div>
+      <div class="mt-3 mb-3">
+        <input
+          [(ngModel)]="country"
+          class="form-control"
+          type="text"
+          placeholder="Enter Country"
+        />
+      </div>
+      <button class="btn btn-lg btn-primary" (click)="onSearch()">Search</button>
+    
+    </div>
+  </div>
+  <div *ngIf="weatherData" class="mt-5">
+    <h3 class="mt-5 mb-5 text-center">
+      {{ weatherData.city.name }}, {{ weatherData.city.country }}
+    </h3>
+
+    <div class="row-me">
+      
+      <div *ngFor="let item of tempArray  " class="mt-2 mb-5 col-6 col-sm-4 col-md-3 col-lg-2 mb-2 weather-card">
+        <div class="card text-center">
+          <h5 class="mt-5">{{ item.dt_txt | date : "shortDate" }}</h5>
+          <img
+            [src]="'https://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'"
+            alt="weather"
+          />
+          <p>{{ item.main.temp }}°C</p>
+          <p>{{ item.weather[0].description }}</p>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+   
+  </div>
+
+ 
+  </div>
+</main>
